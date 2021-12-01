@@ -54,25 +54,25 @@ public class UsoScanner {
 			}
 		} while (!cambio);
 
-		/*La clase Scanner tiene métodos para varios tipos de datos numéricos
-		 * puedes observar que hemos utilizado para el siguiente ejemplo una variable
-		 * para guardar el double que tiene el mismo nombre que la variable que guarda
-		 * el int en el bloque anterior. Esto es debido a que --num-- es una 
-		 * VARIABLE LOCAL, al estar declarada dentro de un bloque de código {  }
-		 * Sin embargo, la variable booleana --cambio--está declarada fuera de los bloques
-		 * de código, dentro del método Main, por lo que será una variable que funcionará
-		 * dentro de todo el método, así que la declaramos una vez y le podemos cambiar el valor
-		 * dentro de los bloques que utilicemos.
-		 * de igual forma lo estamos haciendo con la clase Scanner
-		 * */
-		
+		/*
+		 * La clase Scanner tiene métodos para varios tipos de datos numéricos puedes
+		 * observar que hemos utilizado para el siguiente ejemplo una variable para
+		 * guardar el double que tiene el mismo nombre que la variable que guarda el int
+		 * en el bloque anterior. Esto es debido a que --num-- es una VARIABLE LOCAL, al
+		 * estar declarada dentro de un bloque de código { } Sin embargo, la variable
+		 * booleana --cambio--está declarada fuera de los bloques de código, dentro del
+		 * método Main, por lo que será una variable que funcionará dentro de todo el
+		 * método, así que la declaramos una vez y le podemos cambiar el valor dentro de
+		 * los bloques que utilicemos. de igual forma lo estamos haciendo con la clase
+		 * Scanner
+		 */
+
 		cambio = false;
 		do {
 
 			System.out.println("Escribe un número de tipo double");
 			if (sc.hasNextDouble()) {
 				double num = sc.nextDouble();
-				
 
 				System.out.println(num);
 				cambio = true;
@@ -83,8 +83,6 @@ public class UsoScanner {
 				System.out.println("Introduce un número válido, por favor");
 			}
 		} while (!cambio);
-
-		
 
 	}
 
