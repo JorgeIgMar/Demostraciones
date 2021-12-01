@@ -59,6 +59,8 @@ public class Colecciones {
 		// Pasamos el TreeSet a un navigableSet para acceder a sus métodos
 		
 		NavigableSet<String> cancionesNavegable = (NavigableSet<String>) canciones;
+		
+		//Imprimimos el NavigableSet desde el último elemento hasta el primero
 
 		System.out.println(cancionesNavegable.descendingSet());
 
@@ -70,7 +72,7 @@ public class Colecciones {
 		
 		System.out.println(cancionesNavegable.headSet("Entre dos tierras", true));
 
-		cancionesNavegable.add("Lobo-Hobre en París");
+		cancionesNavegable.add("Lobo-Hombre en París");
 
 		/*
 		 * Imprimimos un sub conjunto de elementos del Set True indica que el elemento
@@ -81,6 +83,13 @@ public class Colecciones {
 		System.out.println(cancionesNavegable.subSet("Deshacer el mundo", false, "Vivir al este del Edén", true));
 		System.out.println(cancionesNavegable.subSet("Deshacer el mundo", false, "Vivir al este del Edén", false));
 		System.out.println(cancionesNavegable.subSet("Deshacer el mundo", true, "Vivir al este del Edén", true));
+		
+		//tailSet devuelve la porción del Set cuyos elementos son mayores o iguales al proporcionado.
+		//True es valor por defecto, en ese caso devuelve el valor igual al proporcionado
+		
+		System.out.println(cancionesNavegable.tailSet("Lobo-Hombre en París"));
+		System.out.println(cancionesNavegable.tailSet("Lobo-Hombre en París", false));
+		
 
 		System.out.println(cancionesNavegable);
 		
