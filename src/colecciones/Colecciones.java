@@ -32,11 +32,11 @@ public class Colecciones {
 		
 		System.out.println(canciones);
 
-		// podemos comprobar si existe un elemento concreto en el TreeSet
+		// Podemos comprobar si existe un elemento concreto en el TreeSet
 
 		System.out.println(canciones.contains("Maldito duende"));
 
-		// imprimimos los elementos a través de un Iterator
+		// Imprimimos los elementos a través de un Iterator
 
 		Iterator<String> iterador = canciones.iterator();
 		
@@ -60,7 +60,7 @@ public class Colecciones {
 		
 		NavigableSet<String> cancionesNavegable = (NavigableSet<String>) canciones;
 		
-		//Imprimimos el NavigableSet desde el último elemento hasta el primero
+		// Imprimimos el NavigableSet desde el último elemento hasta el primero
 
 		System.out.println(cancionesNavegable.descendingSet());
 
@@ -84,8 +84,8 @@ public class Colecciones {
 		System.out.println(cancionesNavegable.subSet("Deshacer el mundo", false, "Vivir al este del Edén", false));
 		System.out.println(cancionesNavegable.subSet("Deshacer el mundo", true, "Vivir al este del Edén", true));
 		
-		//tailSet devuelve la porción del Set cuyos elementos son mayores o iguales al proporcionado.
-		//True es valor por defecto, en ese caso devuelve el valor igual al proporcionado
+		// tailSet devuelve la porción del Set cuyos elementos son mayores o iguales al proporcionado.
+		// True es valor por defecto, en ese caso devuelve el valor igual al proporcionado
 		
 		System.out.println(cancionesNavegable.tailSet("Lobo-Hombre en París"));
 		System.out.println(cancionesNavegable.tailSet("Lobo-Hombre en París", false));
@@ -143,8 +143,25 @@ public class Colecciones {
 		System.out.println("******************   ARRAY LIST  REVERSE *************************");
 		System.out.println();
 		
+		/*
+		 * Para imprimir la lista de canciones al revés, utilizamos el método estático reverse de la
+		 * clase Collections
+		 */
+		
 		Collections.reverse(cancionesLista);
 		System.out.println(cancionesLista);
+		
+		/*
+		 * Comprobamos cuantas veces está la canción indicada en la lista
+		 */
+		System.out.println(Collections.frequency(cancionesLista, "Wish you were here"));
+		
+		//Desordenamos las canciones 
+		
+		Collections.shuffle(cancionesLista);
+		System.out.println(cancionesLista);
+		
+		
 
 	}
 
