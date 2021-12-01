@@ -81,6 +81,7 @@ public class UsoScanner {
 				sc.nextLine();
 				sc.nextLine();
 				System.out.println("Introduce un número válido, por favor");
+				sc.close();
 			}
 		} while (!cambio);
 
